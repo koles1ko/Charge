@@ -1,0 +1,265 @@
+// import libs
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+
+@import 'components/vars.scss';
+@import 'components/mixins.scss';
+@import 'components/fonts.scss';
+@import 'components/scaffolding.scss';
+
+header{
+  position: absolute;
+  width: 100%;
+  padding: 0 40px;
+  top: 40px;
+  z-index: 1;
+}
+.header {
+  display: flex;
+  justify-content: space-between; 
+  // &__logo {
+
+  // }
+  &__menu {
+    // display: none;
+    transition: 1s;
+    transform: translateY(-100px);
+    li{
+      display: inline-block;
+      & + li{margin-left: 36px;}
+    }
+    a{
+      text-transform: uppercase;
+      font-family: proxi;
+      font-weight: 400;
+      color: #fff;
+    }
+    &.active{transform: translateY(0)}
+  }
+  .burger {
+    padding-right: 50px;
+    &:hover{cursor: pointer;}
+    &::after{
+      position: absolute;
+      content: 'menu';
+      display: block;
+      top: -1px;
+      right: 39px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    div{
+      width: 12px;
+      height: 1px;
+      background-color: $orange;
+      & + div{
+        margin: 4px 0px 0px 0px;
+      }
+    }  
+  }
+}
+
+.intro {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 270px;
+  &__slider {
+    max-width: 1620px;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 auto;
+    .slick-prev{
+      left: 70px;
+    }
+    .slick-next{
+      right: 70px;
+    }
+    .slick-next::before{
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: -27px;
+      width: 47px;
+      height: 2px;
+      background-color: $orange;
+    }
+    .slick-prev::before{
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0px;
+      width: 47px;
+      height: 2px;
+      background-color: $orange;
+    }
+    .slick-prev:after,
+    .slick-next:after{
+      position: absolute;
+      top: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 14px;
+    }
+    .slick-prev:after{
+      content: 'prev';
+      left: -50px;
+    }
+    .slick-next:after{
+      content: 'next';
+      right: -50px;
+    }
+  }
+  &__slider-item-wrapper{
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+  &__slider-item {
+    margin: 0 auto;
+    max-width: 520px;
+    width: 100%;
+    h2{
+      font-weight: 700;
+      font-size: 120px;
+      color: $orange;
+      font-family: "Play";
+    }
+    p{
+      max-width: 360px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+  }
+  // .slick-prev:before, 
+  // .slick-next:before {
+  //   content: '';
+  //   display: block;
+  //   width: 47px;
+  //   height: 2px;
+  //   background-color: $orange;
+  // }
+  // .slick-prev:before{right: 0;}
+  // .slick-next:before{left: 0;}
+  // .slick-prev:after,
+  // .slick-next:after{
+  //   position: absolute;
+  //   top: 10px;
+  //   text-transform: uppercase;
+  //   color: #fff;
+  //   font-size: 14px;
+  // }
+  // .slick-prev:after{
+  //   content: 'prev';
+  //   left: -50px;
+  // }
+  // .slick-next:after{
+  //   content: 'next';
+  //   right: -75px;
+  // }
+  .social {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    li{
+      display: inline-block;
+      & + li{
+        margin-left: 28px;
+        a{position: relative;}
+        a::before{
+          position: absolute;
+          content: '/';
+          top: 0;
+          left: -17px;
+        }
+        
+      }
+    }
+    a{
+      color: #fff;
+    }
+  }
+  .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    a{color: #fff;}
+  }
+}
+.about {
+  min-height: 783px;
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+    min-height: 540px;
+  }
+  &__img {
+    width: 60%;
+    margin-right: 80px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__desc {
+    max-width: 389px;
+    width: 100%;
+    .section-title{
+      margin-bottom: 20px;
+    }
+    .section-desc{margin-bottom: 30px;}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'components/media.scss';

@@ -1,0 +1,35 @@
+@media(max-width: 1280px){ // x1024 планшеты альбом
+
+}
+@media(max-width: 1024px){ // x768 планшеты альбом
+
+}
+@media(max-width: 767px){ // х1024 планшеты портрет
+  .header {
+    flex-wrap: wrap;
+		&__logo {
+      order: 1;
+		}
+		&__menu {
+      order: 3;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      transform: translateY(-150px);
+      transition: 1.5s;
+    }
+    .burger {
+      order: 2;
+    }
+  }
+}
+@media(max-width: 480px){ // мобилки
+  .header {
+		&__menu {
+      li + li{margin-left: 15px;}
+    }
+  }
+}
+@media(max-width: 320px){ //мобилки
+  
+}
