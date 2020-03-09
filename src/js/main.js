@@ -19,6 +19,69 @@ $(function () {
     variableWidth: false,
   });
 
+
+  $('.slider-top').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    useTransform: false,
+    variableWidth: true,
+    speed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  $('.slider-bottom').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    useTransform: false,
+    variableWidth: true,
+    speed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   //  $(".test").on('click', function(){
   //    $(".test").toggleClass("active");
   //  }); 
