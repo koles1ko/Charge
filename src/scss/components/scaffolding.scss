@@ -116,3 +116,11 @@ body {
 .right {
   right: 160px;
 }
+.big-letter{
+  font-weight: 700;
+  font-family: 'play';
+  font-size: 300px;
+  color: rgba($orange, .22);
+  text-transform: uppercase;
+  position: absolute;
+}
