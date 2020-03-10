@@ -3,12 +3,16 @@
   .left{left: 60px;}
 }
 @media(max-width: 1024px){ // x768 планшеты альбом
+  .intro{padding-top: 200px;}
   .services{
     &__top{padding: 0 30px;}
     &__bottom{padding: 0 30px;}
     &__item{width: 30%;}
   }
   .reviews{
+    .reviews-slider__item::before{
+      left: 50px;
+    }
     .slick-prev{left: 20px;}
     .slick-next{right: 20px;}
   }
@@ -17,7 +21,7 @@
   }
 
 }
-@media(max-width: 767px){ // х1024 планшеты портрет
+@media(max-width: 769px){ // х1024 планшеты портрет
   .header {
     flex-wrap: wrap;
 		&__logo {
@@ -39,6 +43,14 @@
     &__slider-item{padding-left: 30px;}
   }
   .about{
+    padding-bottom: 50px;
+    &__inner{flex-wrap: wrap;}
+    &__img{
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__desc{margin: 0 auto;}
     &-letter{
       right: 5px;
       top: -55px;
@@ -62,27 +74,57 @@
       right: 5px;
       top: -15px;
     }
-    .slider-top{
-    //   width: 100%;
+    .slider-top, 
+    .slider-bottom{
       height: 300px;
+      margin-bottom: 50px;
       img{
-    //     display: block;
-    //     width: auto !important;
+        display: block;
         height: 240px;
-    //     transition: 1s;
       }
-      .slick-slide{margin-top: 105px;}
+      .slick-list{height: 300px;}
+      .slick-slide{margin-top: 56px;}
       .slick-active.slick-current.slick-center{
-    //     margin-top: 14px;
+        margin-top: 0;
         height: 300px;
-    //     transition: 1s;
         img{
           height: 300px;
-    //       width: auto !important;
-    //       transition: 1s;
         }
       }
     }
+    .slider-bottom{
+      .slick-slide{margin-top: 0;}
+    }
+  }
+  .reviews{
+    .reviews-slider__item::before{
+      font-size: 400px;
+      top: -80px;
+    }
+  }
+  .customs{
+    padding-bottom: 50px;
+    &__inner{flex-wrap: wrap;}
+    &__img{
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__desc{
+      margin: 0 auto;
+    }
+    .dft-btn-border{margin: 0 auto;}
+    .right{right: 20px;}
+  }
+  .footer{
+    flex-wrap: wrap;
+    &__logo{order: 2;}
+    &__menu{
+      text-align: center;
+      order: 1;
+      width: 100%;
+    }
+    &__copy{order: 3}
   }
 }
 @media(max-width: 480px){ // мобилки

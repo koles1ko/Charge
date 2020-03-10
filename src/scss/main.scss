@@ -424,6 +424,10 @@ header{
     top: -150px;
   }
   .reviews-slider {
+    max-width: 1090px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
     // z-index: 100;
     .slick-next,
     .slick-prev{
@@ -444,8 +448,6 @@ header{
       right: 0;
     }
     &__item {
-      max-width: 1090px;
-      width: 100%;
       text-align: center;
       position: relative;
       min-height: 272px;
