@@ -59,7 +59,6 @@ header{
   }
 }
 .intro {
-  // height: 100vh;
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -139,32 +138,6 @@ header{
       margin-bottom: 50px;
     }
   }
-  // .slick-prev:before, 
-  // .slick-next:before {
-  //   content: '';
-  //   display: block;
-  //   width: 47px;
-  //   height: 2px;
-  //   background-color: $orange;
-  // }
-  // .slick-prev:before{right: 0;}
-  // .slick-next:before{left: 0;}
-  // .slick-prev:after,
-  // .slick-next:after{
-  //   position: absolute;
-  //   top: 10px;
-  //   text-transform: uppercase;
-  //   color: #fff;
-  //   font-size: 14px;
-  // }
-  // .slick-prev:after{
-  //   content: 'prev';
-  //   left: -50px;
-  // }
-  // .slick-next:after{
-  //   content: 'next';
-  //   right: -75px;
-  // }
   .social {
     position: absolute;
     left: 40px;
@@ -191,6 +164,7 @@ header{
     position: absolute;
     bottom: 40px;
     right: 40px;
+    animation-duration: 3s;
     a{color: #fff;}
   }
 }
@@ -267,7 +241,7 @@ header{
     position: relative;
     width: 352px;
     height: 352px;
-    overflow-y: hidden;
+    overflow: hidden;
   }
   &__item-grad{
     height: 100%;
@@ -282,6 +256,9 @@ header{
     transition: 1s;
   }
   &__hover {
+    &.top{transform: translateY(-352px);}
+    &.left{transform: translateX(-352px);}
+    &.right{transform: translateX(352px);}
     width: 100%;
     height: 100%;
     position: absolute;
@@ -292,7 +269,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-352px);
     transition: 1s;
     &-border{
       border: 1px solid $orange;
@@ -337,7 +313,9 @@ header{
   }
   &__item:hover{
     .services__hover{
-      transform: translateX(0);
+      &.top{transform: translateY(0);}
+      &.left{transform: translateX(0);}
+      &.right{transform: translateX(0);}
     }
     .services__item-name{
       display: none;
@@ -411,7 +389,7 @@ header{
   .right{right:115px}
   &-letter{
     right: 70px;
-    top: 245px;
+    top: 40px;
   }
 }
 .reviews {

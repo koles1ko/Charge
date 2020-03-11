@@ -29,7 +29,7 @@ $(function () {
   });
 
   $('.slider-top').slick({
-    // centerMode: true,
+    centerMode: true,
     centerPadding: '60px',
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -60,7 +60,7 @@ $(function () {
   });
 
   $('.slider-bottom').slick({
-    // centerMode: true,
+    centerMode: true,
     centerPadding: '60px',
     slidesToShow: 5,
     slidesToScroll: 1,
