@@ -8,7 +8,7 @@ $(function () {
     $(".header__menu").toggleClass("active");
   }); 
 
-    $('.intro__slider').slick({
+  $('.intro__slider').slick({
     dots: false,
     arrows: true,
     slidesToShow: 1,
@@ -17,18 +17,26 @@ $(function () {
     // autoplay: true,
     centerPadding: 0,
     variableWidth: false,
+    responsive:[
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          arrows: false,
+        }
+      },
+    ]
   });
 
-
   $('.slider-top').slick({
-    centerMode: true,
+    // centerMode: true,
     centerPadding: '60px',
     slidesToShow: 5,
     slidesToScroll: 1,
     focusOnSelect: true,
     useTransform: false,
     variableWidth: true,
-    speed: 2000,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 768,
@@ -52,14 +60,14 @@ $(function () {
   });
 
   $('.slider-bottom').slick({
-    centerMode: true,
+    // centerMode: true,
     centerPadding: '60px',
     slidesToShow: 5,
     slidesToScroll: 1,
     focusOnSelect: true,
     useTransform: false,
     variableWidth: true,
-    speed: 2000,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 768,
@@ -87,6 +95,15 @@ $(function () {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    responsive:[
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          arrows: false,
+        }
+      },
+    ]
     // prevArrow: <div class="prev-arrow"></div>,
     // nextArrow: <div class="next-arrow"></div>,
   });
